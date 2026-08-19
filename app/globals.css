@@ -31,8 +31,8 @@ button{font:inherit}
 /* Side strips remain proportional; only their transparent canvas is cropped. */
 .hero-section::before{top:1%;bottom:1%}
 .balloons{top:5%;width:auto;height:90%;object-fit:contain}
-.balloons-left{left:-1%;object-position:center}
-.balloons-right{right:-1%;object-position:center}
+.balloons-left{left:-4%;object-position:center}
+.balloons-right{right:-7%;object-position:center}
 .invited{top:19%}
 .characters{top:23%;left:26%;width:48%}
 .ribbon-blue{top:56%;left:26%;width:48%}

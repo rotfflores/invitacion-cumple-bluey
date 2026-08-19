@@ -18,7 +18,7 @@ function CurvedText({ children, className, curve = 12, dip = false }: { children
 }
 
 function RibbonText({ children, direction }: { children: string; direction: "up" | "down" }) {
-  const path = direction === "up" ? "M 82 130 Q 400 62 718 130" : "M 72 108 Q 400 190 728 108";
+  const path = direction === "up" ? "M 82 130 Q 400 62 718 130" : "M 72 112 Q 400 198 728 112";
   return (
     <svg className="ribbon-copy" viewBox="0 0 800 240" preserveAspectRatio="xMidYMid meet" aria-label={children} role="img">
       <path id={`ribbon-${direction}`} d={path} fill="none" />
