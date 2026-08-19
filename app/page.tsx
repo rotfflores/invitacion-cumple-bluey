@@ -18,13 +18,17 @@ function CurvedText({ children, className, curve = 12, dip = false }: { children
 }
 
 function RibbonText({ children, direction }: { children: string; direction: "up" | "down" }) {
-  const path = direction === "up" ? "M 90 142 Q 400 78 710 142" : "M 82 102 Q 400 160 718 102";
+  const path = direction === "up" ? "M 82 130 Q 400 62 718 130" : "M 72 108 Q 400 190 728 108";
   return (
     <svg className="ribbon-copy" viewBox="0 0 800 240" preserveAspectRatio="xMidYMid meet" aria-label={children} role="img">
       <path id={`ribbon-${direction}`} d={path} fill="none" />
       <text><textPath href={`#ribbon-${direction}`} startOffset="50%" textAnchor="middle">{children}</textPath></text>
     </svg>
   );
+}
+
+function Paw() {
+  return <svg className="paw-icon" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="42" rx="17" ry="14"/><ellipse cx="13" cy="28" rx="7" ry="9" transform="rotate(-24 13 28)"/><ellipse cx="25" cy="16" rx="7" ry="9" transform="rotate(-8 25 16)"/><ellipse cx="39" cy="16" rx="7" ry="9" transform="rotate(8 39 16)"/><ellipse cx="51" cy="28" rx="7" ry="9" transform="rotate(24 51 28)"/></svg>;
 }
 
 export default function Home() {
@@ -44,7 +48,7 @@ export default function Home() {
           <img src="/assets/ribbon.png" alt="" />
           <RibbonText direction="up">Cumpleaños de</RibbonText>
         </figure>
-        <h1><small aria-hidden="true">🐾</small> Mateo <small aria-hidden="true">🐾</small></h1>
+        <h1><Paw /> Mateo <Paw /></h1>
         <figure className="ribbon ribbon-gold">
           <img src="/assets/celebrate-ribbon.png" alt="" />
           <RibbonText direction="down">Acompáñanos a celebrar</RibbonText>
