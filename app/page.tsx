@@ -39,8 +39,8 @@ function RibbonText({ children, direction }: { children: string; direction: "up"
   );
 }
 
-function Paw() {
-  return <svg className="paw-icon" viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="42" rx="17" ry="14"/><ellipse cx="13" cy="28" rx="7" ry="9" transform="rotate(-24 13 28)"/><ellipse cx="25" cy="16" rx="7" ry="9" transform="rotate(-8 25 16)"/><ellipse cx="39" cy="16" rx="7" ry="9" transform="rotate(8 39 16)"/><ellipse cx="51" cy="28" rx="7" ry="9" transform="rotate(24 51 28)"/></svg>;
+function Paw({ className = "" }: { className?: string }) {
+  return <svg className={`paw-icon ${className}`} viewBox="0 0 64 64" aria-hidden="true"><ellipse cx="32" cy="42" rx="17" ry="14"/><ellipse cx="13" cy="28" rx="7" ry="9" transform="rotate(-24 13 28)"/><ellipse cx="25" cy="16" rx="7" ry="9" transform="rotate(-8 25 16)"/><ellipse cx="39" cy="16" rx="7" ry="9" transform="rotate(8 39 16)"/><ellipse cx="51" cy="28" rx="7" ry="9" transform="rotate(24 51 28)"/></svg>;
 }
 
 export default function Home() {
@@ -96,8 +96,8 @@ export default function Home() {
       </section>
 
       <section className="dress-code-section" aria-label="Código de vestimenta">
-        <h2>Código de vestimenta</h2>
-        <p><strong>Colores:</strong><br />azul, naranja y crema</p>
+        <h2><Paw /> Código de vestimenta <Paw /></h2>
+        <p><span><strong>Colores:</strong><br />azul, naranja y crema</span><span className="color-paws"><Paw className="paw-blue" /><Paw className="paw-orange" /><Paw className="paw-cream" /></span></p>
       </section>
 
       <section className="gift-section" aria-label="Mesa de regalos">
