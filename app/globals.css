@@ -38,6 +38,11 @@ button{font:inherit}
 .venue-card{justify-self:center;width:86%;min-width:0;max-width:100%;overflow:hidden;text-align:center}.venue-card img{display:block;width:min(62%,105px);max-width:100%;height:auto;margin:0 auto 2px}.venue-card h3{max-width:100%;margin:0;font-family:Georgia,serif;font-size:clamp(12px,2.5vw,17px);overflow-wrap:anywhere}.venue-card p{max-width:100%;margin:2px 0 0;font-size:clamp(8px,1.8vw,12px);line-height:1.15;overflow-wrap:anywhere}
 @media(max-width:420px){.reception-section{grid-template-columns:1.25fr .75fr;padding:31px 26px 11px 24px}.reception-section h2{top:13px;font-size:17px}.reception-schedule{gap:3px;padding-right:6px;border-right-width:1px}.event-icon{margin-right:2px;font-size:18px}.reception-schedule strong{font-size:10px}.reception-schedule small{font-size:8px}.map-button{min-width:84%;margin-top:2px;padding:4px 7px;border-width:1px;font-size:10px}.venue-card{width:78%}.venue-card img{width:46%}.venue-card h3{font-size:9px}.venue-card p{font-size:7px}}
 
+.dress-code-section{position:relative;width:100%;aspect-ratio:2200/700;margin-top:18px;background:url("/assets/dress-code-card.png") center/contain no-repeat;color:#174879}
+.dress-code-section h2{position:absolute;top:15%;left:7%;width:57%;margin:0;text-align:center;font-family:Georgia,serif;font-size:clamp(20px,4.5vw,32px);text-transform:uppercase;letter-spacing:.03em}
+.dress-code-section p{position:absolute;left:11%;bottom:15%;width:29%;margin:0;font-family:Georgia,serif;font-size:clamp(12px,2.8vw,19px);line-height:1.25;text-align:center}.dress-code-section p strong{font-size:1.08em;color:#c87917}
+@media(max-width:420px){.dress-code-section h2{top:14%;font-size:13px;letter-spacing:0}.dress-code-section p{left:9%;bottom:13%;width:32%;font-size:8px;line-height:1.15}}
+
 /* Stronger side artwork and copy following each ribbon's visible band. */
 .hero-section::before{top:3%;bottom:3%}
 .balloons{top:1%;height:98%}

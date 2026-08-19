@@ -94,6 +94,11 @@ export default function Home() {
           <p>Av. Las Flores 123<br />Ciudad Jardín</p>
         </article>
       </section>
+
+      <section className="dress-code-section" aria-label="Código de vestimenta">
+        <h2>Código de vestimenta</h2>
+        <p><strong>Colores:</strong><br />azul, naranja y crema</p>
+      </section>
     </main>
   );
 }
