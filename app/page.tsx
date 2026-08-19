@@ -9,25 +9,22 @@ export default function Home() {
   return (
     <main className="page-shell">
       <article className="invitation" aria-label="Invitación de cumpleaños">
-        <div className="spot spot-1" /><div className="spot spot-2" />
-        <div className="spot spot-3" /><div className="spot spot-4" />
-        <div className="spot spot-5" /><div className="spot spot-6" />
-        <header className="hero">
-          <p className="eyebrow">ESTE EPISODIO ES DE</p>
-          <h1>¡MI CUMPLE!</h1>
-        </header>
-        <div className="balloon-scene" aria-hidden="true">
-          <div className="balloon orange left"><span /></div>
-          <div className="balloon blue center"><span /></div>
-          <div className="balloon orange right"><span /></div>
-          <div className="confetti c1" /><div className="confetti c2" />
-          <div className="confetti c3" /><div className="confetti c4" />
-          <div className="confetti c5" /><div className="confetti c6" />
-          <div className="party-burst">🎉</div>
-        </div>
-        <section className="celebrant">
-          <h2>NOMBRE</h2>
-          <p>cumple <strong>2</strong> años</p>
+        <section className="phone-hero" aria-label="Invitación para Mateo">
+          <img className="side-balloons left-side" src="/assets/balloons-left.png" alt="" />
+          <img className="side-balloons right-side" src="/assets/balloons-right.png" alt="" />
+          <div className="ornamental-card">
+            <img className="ornamental-frame" src="/assets/ornamental-frame.png" alt="" />
+            <div className="hero-copy">
+              <p className="invited">¡Estás invitado!</p>
+              <img className="characters" src="/assets/characters.png" alt="Bluey y Bingo celebrando" />
+              <div className="birthday-ribbon">
+                <img src="/assets/ribbon.png" alt="" />
+                <span>Cumpleaños de</span>
+              </div>
+              <h1><span aria-hidden="true">🐾</span> Mateo <span aria-hidden="true">🐾</span></h1>
+              <p className="join-us">Acompáñanos a celebrar</p>
+            </div>
+          </div>
         </section>
         <section className="details" aria-label="Detalles del evento">
           <div className="date-block"><span>SÁBADO</span><strong>27</strong><span>AGOSTO</span></div>
