@@ -1,6 +1,18 @@
 "use client";
 
-import type { CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
+
+const EVENT_TIME = new Date("2026-08-27T15:00:00-06:00").getTime();
+
+function getCountdown() {
+  const distance = Math.max(0, EVENT_TIME - Date.now());
+  return {
+    días: Math.floor(distance / 86400000),
+    horas: Math.floor((distance / 3600000) % 24),
+    minutos: Math.floor((distance / 60000) % 60),
+    segundos: Math.floor((distance / 1000) % 60),
+  };
+}
 
 function CurvedText({ children, className, curve = 12, dip = false }: { children: string; className: string; curve?: number; dip?: boolean }) {
   const letters = Array.from(children);
@@ -32,10 +44,12 @@ function Paw() {
 }
 
 export default function Home() {
-  const confirmAttendance = () => {
-    const message = encodeURIComponent("¡Hola! Confirmo mi asistencia al cumpleaños de Mateo 🎈");
-    window.open(`https://wa.me/?text=${message}`, "_blank", "noopener,noreferrer");
-  };
+  const [countdown, setCountdown] = useState(getCountdown);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setCountdown(getCountdown()), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   return (
     <main className="invitation-page">
@@ -55,15 +69,16 @@ export default function Home() {
         </figure>
       </section>
 
-      <section className="details-section" aria-label="Detalles del evento">
-        <p className="date"><span>SÁBADO</span><strong>27</strong><span>AGOSTO</span></p>
-        <hr aria-hidden="true" />
-        <p className="event"><strong>3:00 PM A 5:00 PM</strong><span>EN CASA</span><small>CALLE Y NÚMERO<br />CIUDAD</small></p>
-      </section>
-
-      <section className="rsvp-section">
-        <button type="button" onClick={confirmAttendance}>Confirmar asistencia →</button>
-        <p>¡Te esperamos para jugar y celebrar!</p>
+      <section className="countdown-section" aria-label="Cuenta regresiva para el cumpleaños">
+        <h2><Paw /> Cuenta regresiva <Paw /></h2>
+        <ol className="countdown-grid">
+          {Object.entries(countdown).map(([label, value]) => (
+            <li className="time-unit" key={label}>
+              <strong>{String(value).padStart(2, "0")}</strong>
+              <span>{label}</span>
+            </li>
+          ))}
+        </ol>
       </section>
     </main>
   );

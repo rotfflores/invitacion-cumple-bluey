@@ -22,6 +22,15 @@ button{font:inherit}
 .rsvp-section{text-align:center}.rsvp-section button{width:100%;margin-top:18px;padding:15px 22px;border:0;border-radius:999px;color:#fff;background:var(--navy);font-weight:700;font-size:18px;cursor:pointer;box-shadow:0 8px #0a285d;transition:.2s}.rsvp-section button:hover{transform:translateY(-2px);box-shadow:0 10px #0a285d}.rsvp-section button:focus-visible{outline:4px solid var(--gold);outline-offset:3px}.rsvp-section p{margin:18px 0 0;font-size:14px;font-weight:600}
 @media(max-width:480px){.invitation-page{padding-inline:4px}.details-section{padding-inline:9px}.event strong{font-size:16px}}
 
+.countdown-section{position:relative;margin-top:14px;padding:22px 18px 20px;border:3px solid #e5b74e;border-radius:clamp(22px,6vw,42px);background:linear-gradient(145deg,#fffef8,#fff9e9);box-shadow:0 10px 24px #063f7830}
+.countdown-section:before{content:"";position:absolute;inset:8px;border:2px dashed #d59a16;border-radius:clamp(16px,5vw,34px);pointer-events:none}
+.countdown-section h2{position:relative;display:flex;align-items:center;justify-content:center;gap:clamp(8px,2vw,18px);margin:0 0 18px;color:#113e78;font-family:Georgia,serif;font-size:clamp(22px,5.5vw,38px);font-weight:700;text-transform:uppercase;letter-spacing:.04em}.countdown-section h2 .paw-icon{width:.9em;height:.9em}
+.countdown-grid{position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(7px,2.4vw,18px);margin:0;padding:0;list-style:none}
+.time-unit{position:relative;min-width:0;text-align:center}.time-unit:not(:last-child):after{content:":";position:absolute;top:28%;right:calc(clamp(7px,2.4vw,18px) / -2);transform:translate(50%,-50%);color:#113e78;font-family:Georgia,serif;font-size:clamp(18px,5vw,34px);font-weight:700}
+.time-unit strong{display:grid;place-items:center;aspect-ratio:1/1;min-width:0;border:2px solid #edcb7a;border-radius:clamp(14px,4vw,28px);background:linear-gradient(145deg,#fff,#fff9eb);color:#123f7d;font-family:Georgia,serif;font-size:clamp(32px,10vw,66px);line-height:1;box-shadow:inset 0 -5px 8px #d9b65a20,0 4px 8px #7c5c1714}
+.time-unit span{display:block;margin-top:9px;color:#113b73;font-family:Georgia,serif;font-size:clamp(10px,2.6vw,16px);font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+@media(max-width:390px){.countdown-section{padding-inline:12px}.countdown-grid{gap:6px}.time-unit:not(:last-child):after{right:-3px}.time-unit span{font-size:9px;letter-spacing:0}}
+
 /* Stronger side artwork and copy following each ribbon's visible band. */
 .hero-section::before{top:3%;bottom:3%}
 .balloons{top:1%;height:98%}
