@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type CSSProperties } from "react";
 
-const EVENT_TIME = new Date("2026-08-27T15:00:00-06:00").getTime();
+const EVENT_TIME = new Date("2026-10-17T13:00:00-06:00").getTime();
 
 function getCountdown() {
   const distance = Math.max(0, EVENT_TIME - Date.now());
@@ -79,6 +79,20 @@ export default function Home() {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="reception-section" aria-label="Información de la recepción">
+        <h2><Paw /> Recepción <Paw /></h2>
+        <article className="reception-schedule">
+          <p><span className="event-icon" aria-hidden="true">🗓️</span><strong>Sábado</strong><small>17 de octubre<br />de 2026</small></p>
+          <p><span className="event-icon" aria-hidden="true">🕐</span><strong>1:00 p. m.</strong><small>Hora de inicio</small></p>
+          <a className="map-button" href="https://www.google.com/maps/search/?api=1&query=Sal%C3%B3n+El+Para%C3%ADso+Av.+Las+Flores+123+Ciudad+Jard%C3%ADn" target="_blank" rel="noreferrer">📍 Ver mapa</a>
+        </article>
+        <article className="venue-card">
+          <img src="/assets/reception-castle.png" alt="Castillo azul de la recepción" />
+          <h3>Salón El Paraíso</h3>
+          <p>Av. Las Flores 123<br />Ciudad Jardín</p>
+        </article>
       </section>
     </main>
   );
