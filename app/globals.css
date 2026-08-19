@@ -40,8 +40,8 @@ button{font:inherit}
 
 .dress-code-section{position:relative;width:100%;aspect-ratio:2200/700;margin-top:18px;background:url("/assets/dress-code-card.png") center/contain no-repeat;color:#174879}
 .dress-code-section h2{position:absolute;top:15%;left:7%;width:57%;margin:0;text-align:center;font-family:Georgia,serif;font-size:clamp(20px,4.5vw,32px);text-transform:uppercase;letter-spacing:.03em}
-.dress-code-section p{position:absolute;left:11%;bottom:15%;width:29%;margin:0;font-family:Georgia,serif;font-size:clamp(12px,2.8vw,19px);line-height:1.25;text-align:center}.dress-code-section p strong{font-size:1.08em;color:#c87917}
-@media(max-width:420px){.dress-code-section h2{top:14%;font-size:13px;letter-spacing:0}.dress-code-section p{left:9%;bottom:13%;width:32%;font-size:8px;line-height:1.15}}
+.dress-code-section p{position:absolute;left:11%;bottom:25%;width:29%;margin:0;font-family:Georgia,serif;font-size:clamp(12px,2.8vw,19px);line-height:1.25;text-align:center}.dress-code-section p strong{font-size:1.08em;color:#c87917}
+@media(max-width:420px){.dress-code-section h2{top:14%;font-size:13px;letter-spacing:0}.dress-code-section p{left:9%;bottom:22%;width:32%;font-size:8px;line-height:1.15}}
 
 /* Stronger side artwork and copy following each ribbon's visible band. */
 .hero-section::before{top:3%;bottom:3%}
