@@ -96,7 +96,7 @@ export default function Home() {
       </section>
 
       <section className="dress-code-section" aria-label="Código de vestimenta">
-        <h2><Paw /> Código de vestimenta <Paw /></h2>
+        <h2><Paw /><span>Código de vestimenta</span><Paw /></h2>
         <p><span><strong>Colores:</strong><br />azul, naranja y crema</span><span className="color-paws"><Paw className="paw-blue" /><Paw className="paw-orange" /><Paw className="paw-cream" /></span></p>
       </section>
 
