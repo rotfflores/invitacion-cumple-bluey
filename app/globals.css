@@ -43,6 +43,12 @@ button{font:inherit}
 .dress-code-section p{position:absolute;left:11%;bottom:25%;width:29%;margin:0;font-family:Georgia,serif;font-size:clamp(12px,2.8vw,19px);line-height:1.25;text-align:center}.dress-code-section p strong{font-size:1.08em;color:#c87917}
 @media(max-width:420px){.dress-code-section h2{top:14%;font-size:13px;letter-spacing:0}.dress-code-section p{left:9%;bottom:22%;width:32%;font-size:8px;line-height:1.15}}
 
+.gift-section{position:relative;width:100%;aspect-ratio:2000/766;margin-top:18px;background:url("/assets/gift-card.png") center/contain no-repeat;color:#174879}
+.gift-section h2{position:absolute;top:13%;left:24%;width:52%;margin:0;text-align:center;font-family:Georgia,serif;font-size:clamp(20px,4.5vw,32px);text-transform:uppercase;letter-spacing:.03em}
+.gift-section>img{position:absolute;left:9%;bottom:10%;width:31%;height:62%;object-fit:contain}
+.gift-section>p{position:absolute;right:9%;top:38%;width:47%;margin:0;font-family:Georgia,serif;font-size:clamp(12px,2.6vw,18px);line-height:1.35;text-align:center}.gift-section>p strong{display:block;margin-top:9px;color:#c78316;font-size:1.1em;text-transform:uppercase;letter-spacing:.04em}
+@media(max-width:420px){.gift-section h2{top:12%;font-size:13px;letter-spacing:0}.gift-section>img{left:8%;bottom:9%;width:32%;height:61%}.gift-section>p{right:8%;top:36%;width:48%;font-size:8px;line-height:1.2}.gift-section>p strong{margin-top:4px;font-size:9px;letter-spacing:0}}
+
 /* Stronger side artwork and copy following each ribbon's visible band. */
 .hero-section::before{top:3%;bottom:3%}
 .balloons{top:1%;height:98%}

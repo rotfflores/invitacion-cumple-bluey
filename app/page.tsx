@@ -99,6 +99,12 @@ export default function Home() {
         <h2>Código de vestimenta</h2>
         <p><strong>Colores:</strong><br />azul, naranja y crema</p>
       </section>
+
+      <section className="gift-section" aria-label="Mesa de regalos">
+        <h2>Mesa de regalos</h2>
+        <img src="/assets/gift-box.png" alt="Regalo azul con moño dorado" />
+        <p>Tu presencia es nuestro mejor regalo. Si deseas hacernos un obsequio, habrá mesa de regalos.<strong>Gracias de corazón</strong></p>
+      </section>
     </main>
   );
 }
