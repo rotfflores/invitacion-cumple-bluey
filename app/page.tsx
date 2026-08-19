@@ -2,17 +2,15 @@
 
 import type { CSSProperties } from "react";
 
-function CurvedText({ children, className }: { children: string; className: string }) {
+function CurvedText({ children, className, dip = false }: { children: string; className: string; dip?: boolean }) {
   const letters = Array.from(children);
   const middle = (letters.length - 1) / 2;
   return (
     <span className={className} aria-label={children} role="text">
       {letters.map((letter, index) => {
         const normalized = middle === 0 ? 0 : (index - middle) / middle;
-        const style = {
-          "--curve-y": `${Math.round(normalized * normalized * 8)}px`,
-          "--curve-r": `${normalized * 6}deg`,
-        } as CSSProperties;
+        const curve = dip ? (1 - normalized * normalized) * 7 : normalized * normalized * 7;
+        const style = { "--curve-y": `${Math.round(curve)}px` } as CSSProperties;
         return <span key={`${letter}-${index}`} style={style} aria-hidden="true">{letter === " " ? "\u00a0" : letter}</span>;
       })}
     </span>
@@ -39,7 +37,7 @@ export default function Home() {
         <h1><small aria-hidden="true">🐾</small> Mateo <small aria-hidden="true">🐾</small></h1>
         <figure className="ribbon ribbon-gold">
           <img src="/assets/celebrate-ribbon.png" alt="" />
-          <CurvedText className="ribbon-copy ribbon-copy-gold">Acompáñanos a celebrar</CurvedText>
+          <CurvedText className="ribbon-copy ribbon-copy-gold" dip>Acompáñanos a celebrar</CurvedText>
         </figure>
       </section>
 
