@@ -2,7 +2,7 @@
 
 :root{--navy:#123b80;--sky:#c9edff;--gold:#b77b13}
 *{box-sizing:border-box}
-html,body{margin:0;background-color:#0b5ba8}
+html,body{margin:0;background-color:#0b5ba8;overflow-x:clip}
 body{color:var(--navy);font-family:var(--font-fredoka),Arial,sans-serif;background-image:linear-gradient(180deg,#07509a 0%,#2388cb 43%,#8ed2f1 74%,#d9f2ff 100%);background-size:auto;background-attachment:fixed}
 button{font:inherit}
 
@@ -34,7 +34,7 @@ button{font:inherit}
 .balloons-left{left:-4%;object-position:center}
 .balloons-right{right:-12%;object-position:center}
 .invited{top:19%}
-.characters{top:23%;left:12%;width:76%}
-.ribbon-blue{top:69.5%;left:26%;width:48%}
-.hero-section h1{top:79.5%;left:23%;width:54%}
+.characters{top:20.5%;left:10%;width:80%}
+.ribbon-blue{top:71.5%;left:26%;width:48%}
+.hero-section h1{top:80.5%;left:23%;width:54%}
 .ribbon-gold{top:86.5%;left:26%;width:48%}
