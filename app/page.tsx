@@ -105,6 +105,13 @@ export default function Home() {
         <img src="/assets/gift-box.png" alt="Regalo azul con moño dorado" />
         <p>Tu presencia es nuestro mejor regalo. Si deseas hacernos un obsequio, habrá mesa de regalos.<strong>Gracias de corazón</strong></p>
       </section>
+
+      <section className="rsvp-section" aria-label="Confirma tu asistencia">
+        <h2>Confirma tu asistencia</h2>
+        <p className="rsvp-lead">Tu confirmación hará que este día sea aún más especial.</p>
+        <button type="button" className="rsvp-button"><Paw />Confirmar asistencia</button>
+        <p className="rsvp-closing">¡Te esperamos para vivir una aventura increíble!</p>
+      </section>
     </main>
   );
 }
