@@ -2,14 +2,14 @@
 
 import type { CSSProperties } from "react";
 
-function CurvedText({ children, className, curve = 3 }: { children: string; className: string; curve?: number }) {
+function CurvedText({ children, className, curve = 12, dip = false }: { children: string; className: string; curve?: number; dip?: boolean }) {
   const letters = Array.from(children);
   const middle = (letters.length - 1) / 2;
   return (
     <span className={className} aria-label={children} role="text">
       {letters.map((letter, index) => {
         const normalized = middle === 0 ? 0 : (index - middle) / middle;
-        const offset = normalized * normalized * curve;
+        const offset = dip ? (1 - normalized * normalized) * curve : normalized * normalized * curve;
         const style = { "--curve-y": `${Math.round(offset)}px` } as CSSProperties;
         return <span key={`${letter}-${index}`} style={style} aria-hidden="true">{letter === " " ? "\u00a0" : letter}</span>;
       })}
@@ -37,7 +37,7 @@ export default function Home() {
         <h1><small aria-hidden="true">🐾</small> Mateo <small aria-hidden="true">🐾</small></h1>
         <figure className="ribbon ribbon-gold">
           <img src="/assets/celebrate-ribbon.png" alt="" />
-          <CurvedText className="ribbon-copy ribbon-copy-gold">Acompáñanos a celebrar</CurvedText>
+          <CurvedText className="ribbon-copy ribbon-copy-gold" curve={10} dip>Acompáñanos a celebrar</CurvedText>
         </figure>
       </section>
 
