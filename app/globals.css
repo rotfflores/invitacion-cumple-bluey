@@ -2,8 +2,8 @@
 
 :root{--navy:#123b80;--sky:#c9edff;--gold:#b77b13}
 *{box-sizing:border-box}
-html,body{margin:0;background-color:var(--sky)}
-body{color:var(--navy);font-family:var(--font-fredoka),Arial,sans-serif;background-image:radial-gradient(circle,#73b9df38 0 7px,transparent 8px),linear-gradient(35deg,transparent 46%,#f5ad3630 47% 54%,transparent 55%);background-size:112px 112px,92px 92px}
+html,body{margin:0;background-color:#0b5ba8}
+body{color:var(--navy);font-family:var(--font-fredoka),Arial,sans-serif;background-image:linear-gradient(180deg,#07509a 0%,#2388cb 43%,#8ed2f1 74%,#d9f2ff 100%);background-size:auto;background-attachment:fixed}
 button{font:inherit}
 
 .invitation-page{width:min(100%,620px);min-height:100svh;margin:0 auto;padding:0 10px 32px}
@@ -31,10 +31,14 @@ button{font:inherit}
 /* Side strips remain proportional; only their transparent canvas is cropped. */
 .hero-section::before{top:8%;bottom:8%}
 .balloons{top:8%;width:15%;height:84%;object-fit:cover}
-.balloons-left{left:0;object-position:left center}
-.balloons-right{right:0;object-position:right center}
+.balloons-left{left:0;object-position:24% center}
+.balloons-right{right:0;object-position:70% center}
 .invited{top:16%}
 .characters{top:23%;left:26%;width:48%}
 .ribbon-blue{top:56%;left:26%;width:48%}
 .hero-section h1{top:66%;left:23%;width:54%}
 .ribbon-gold{top:75%;left:26%;width:48%}
+
+/* The lettering sits inside the visible fabric, like the printed reference. */
+.ribbon-copy-blue{inset:18% 15% 40%;color:#fff;font-style:normal;text-shadow:0 1px #d8efff,0 2px 2px #08366f;filter:none}
+.ribbon-copy-gold{inset:22% 11% 28%;color:#fff;font-style:normal;text-shadow:0 1px #fff4cf,0 2px 2px #875711;filter:none}

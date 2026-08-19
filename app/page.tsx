@@ -2,15 +2,15 @@
 
 import type { CSSProperties } from "react";
 
-function CurvedText({ children, className, dip = false }: { children: string; className: string; dip?: boolean }) {
+function CurvedText({ children, className, curve = 3 }: { children: string; className: string; curve?: number }) {
   const letters = Array.from(children);
   const middle = (letters.length - 1) / 2;
   return (
     <span className={className} aria-label={children} role="text">
       {letters.map((letter, index) => {
         const normalized = middle === 0 ? 0 : (index - middle) / middle;
-        const curve = dip ? (1 - normalized * normalized) * 7 : normalized * normalized * 7;
-        const style = { "--curve-y": `${Math.round(curve)}px` } as CSSProperties;
+        const offset = normalized * normalized * curve;
+        const style = { "--curve-y": `${Math.round(offset)}px` } as CSSProperties;
         return <span key={`${letter}-${index}`} style={style} aria-hidden="true">{letter === " " ? "\u00a0" : letter}</span>;
       })}
     </span>
@@ -28,7 +28,7 @@ export default function Home() {
       <section className="hero-section" aria-label="Invitación para Mateo">
         <img className="balloons balloons-left" src="/assets/balloons-left.png" alt="" />
         <img className="balloons balloons-right" src="/assets/balloons-right.png" alt="" />
-        <CurvedText className="invited">¡Estás invitado!</CurvedText>
+        <CurvedText className="invited" curve={7}>¡Estás invitado!</CurvedText>
         <img className="characters" src="/assets/characters.png" alt="Bluey y Bingo celebrando" />
         <figure className="ribbon ribbon-blue">
           <img src="/assets/ribbon.png" alt="" />
@@ -37,7 +37,7 @@ export default function Home() {
         <h1><small aria-hidden="true">🐾</small> Mateo <small aria-hidden="true">🐾</small></h1>
         <figure className="ribbon ribbon-gold">
           <img src="/assets/celebrate-ribbon.png" alt="" />
-          <CurvedText className="ribbon-copy ribbon-copy-gold" dip>Acompáñanos a celebrar</CurvedText>
+          <CurvedText className="ribbon-copy ribbon-copy-gold">Acompáñanos a celebrar</CurvedText>
         </figure>
       </section>
 
