@@ -12,9 +12,10 @@
 .hero-section h1{top:66%;left:23%;width:54%}
 .ribbon-gold{top:75%;left:26%;width:48%}
 .invited span,.ribbon-copy span{transform:translateY(var(--curve-y))}
-html,body{background-color:#0b5ba8}
-body{background-image:linear-gradient(180deg,#07509a 0%,#2388cb 43%,#8ed2f1 74%,#d9f2ff 100%);background-size:auto;background-attachment:fixed}
-.balloons-left{object-position:24% center}
-.balloons-right{object-position:70% center}
+html,body{background-color:#0b5ba8!important}
+body{background-image:linear-gradient(180deg,#07509a 0%,#2388cb 43%,#8ed2f1 74%,#d9f2ff 100%)!important;background-size:auto!important;background-attachment:fixed}
+.hero-section>.balloons{top:8%;width:15.5%!important;height:84%!important;object-fit:cover!important}
+.hero-section>.balloons-left{left:0;object-position:24% center}
+.hero-section>.balloons-right{right:0;object-position:70% center}
 .ribbon-copy-blue{inset:18% 15% 40%;color:#fff;font-style:normal;text-shadow:0 1px #d8efff,0 2px 2px #08366f;filter:none}
 .ribbon-copy-gold{inset:22% 11% 28%;color:#fff;font-style:normal;text-shadow:0 1px #fff4cf,0 2px 2px #875711;filter:none}
