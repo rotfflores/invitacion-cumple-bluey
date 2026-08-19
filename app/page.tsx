@@ -15,14 +15,19 @@ export default function Home() {
           <div className="ornamental-card">
             <img className="ornamental-frame" src="/assets/ornamental-frame.png" alt="" />
             <div className="hero-copy">
-              <p className="invited">¡Estás invitado!</p>
+              <p className="invited" aria-label="¡Estás invitado!" role="text">
+                <span aria-hidden="true">¡</span><span aria-hidden="true">E</span><span aria-hidden="true">s</span><span aria-hidden="true">t</span><span aria-hidden="true">á</span><span aria-hidden="true">s</span><span aria-hidden="true"> </span><span aria-hidden="true">i</span><span aria-hidden="true">n</span><span aria-hidden="true">v</span><span aria-hidden="true">i</span><span aria-hidden="true">t</span><span aria-hidden="true">a</span><span aria-hidden="true">d</span><span aria-hidden="true">o</span><span aria-hidden="true">!</span>
+              </p>
               <img className="characters" src="/assets/characters.png" alt="Bluey y Bingo celebrando" />
               <div className="birthday-ribbon">
                 <img src="/assets/ribbon.png" alt="" />
                 <span>Cumpleaños de</span>
               </div>
               <h1><span aria-hidden="true">🐾</span> Mateo <span aria-hidden="true">🐾</span></h1>
-              <p className="join-us">Acompáñanos a celebrar</p>
+              <div className="celebrate-ribbon">
+                <img src="/assets/celebrate-ribbon.png" alt="" />
+                <span>Acompáñanos a celebrar</span>
+              </div>
             </div>
           </div>
         </section>
