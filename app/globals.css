@@ -23,3 +23,23 @@ button{font:inherit}
 @media(max-width:480px){.page-shell{padding:0}.invitation{width:100%;min-height:100svh;padding:0 10px 24px}.phone-hero{min-height:680px;padding:20px 0 0}.ornamental-card{width:100%;height:650px}.hero-copy{width:75%;padding:68px 0 42px}.characters{max-height:295px}.birthday-ribbon img{height:68px}.celebrate-ribbon img{height:64px}.side-balloons{width:60%}.left-side{left:-25%}.right-side{right:-25%}.details{padding-inline:9px}.event-block strong{font-size:16px}}
 @media(max-width:370px){.phone-hero{min-height:620px}.ornamental-card{height:590px}.hero-copy{padding:59px 0 34px}.characters{max-height:260px}.birthday-ribbon img{height:60px}.celebrate-ribbon img{height:56px}.celebrate-ribbon span{inset:14px 0 auto;font-size:15px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+
+/* Responsive alignment pass: one blue layer and all copy locked to artwork. */
+.page-shell{padding:0 0 32px;background:#c9edff}
+.invitation{width:min(100%,620px);padding:0 20px 32px;background:#c9edff;box-shadow:none}
+.phone-hero{width:100%;min-height:760px;padding:24px 0 10px;background:#c9edff;overflow:hidden}
+.ornamental-card{width:82%;height:700px;overflow:hidden}
+.side-balloons{z-index:1;top:2%;width:62%;height:96%;object-fit:contain}
+.left-side{left:-24%}.right-side{right:-24%}
+.hero-copy{width:78%;padding:70px 0 50px}
+.invited{position:relative;top:22px;margin-bottom:22px;font-size:clamp(22px,5.4vw,34px)}
+.characters{max-height:292px;margin:4px 0 -2px}
+.birthday-ribbon{width:92%;margin-top:0}
+.birthday-ribbon img{height:72px}
+.birthday-ribbon span{inset:0 8%;display:grid;place-items:center;padding:0 0 7px;white-space:nowrap;font-size:clamp(15px,3.5vw,22px);line-height:1;transform:skewX(-3deg)}
+.hero-copy h1{margin:-3px 0 0;font-size:clamp(42px,10.5vw,62px)}
+.celebrate-ribbon{width:92%;margin-top:7px}
+.celebrate-ribbon img{height:64px}
+.celebrate-ribbon span{inset:0 10%;display:grid;place-items:center;padding:0 0 5px;white-space:nowrap;font-size:clamp(13px,3vw,19px);line-height:1;transform:rotate(-1deg)}
+@media(max-width:480px){.invitation{padding:0 10px 24px}.phone-hero{min-height:650px;padding-top:12px}.ornamental-card{width:84%;height:630px}.side-balloons{width:66%}.left-side{left:-27%}.right-side{right:-27%}.hero-copy{width:78%;padding:61px 0 40px}.invited{top:19px;margin-bottom:20px}.characters{max-height:262px}.birthday-ribbon img{height:62px}.celebrate-ribbon img{height:56px}}
+@media(max-width:370px){.phone-hero{min-height:580px}.ornamental-card{height:560px}.hero-copy{padding:52px 0 32px}.characters{max-height:225px}.birthday-ribbon img{height:55px}.birthday-ribbon span{padding-bottom:5px}.celebrate-ribbon{margin-top:5px}.celebrate-ribbon img{height:49px}.celebrate-ribbon span{padding-bottom:4px}}
