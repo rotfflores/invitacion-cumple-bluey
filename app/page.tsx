@@ -17,6 +17,16 @@ function CurvedText({ children, className, curve = 12, dip = false }: { children
   );
 }
 
+function RibbonText({ children, direction }: { children: string; direction: "up" | "down" }) {
+  const path = direction === "up" ? "M 90 142 Q 400 78 710 142" : "M 82 102 Q 400 160 718 102";
+  return (
+    <svg className="ribbon-copy" viewBox="0 0 800 240" preserveAspectRatio="xMidYMid meet" aria-label={children} role="img">
+      <path id={`ribbon-${direction}`} d={path} fill="none" />
+      <text><textPath href={`#ribbon-${direction}`} startOffset="50%" textAnchor="middle">{children}</textPath></text>
+    </svg>
+  );
+}
+
 export default function Home() {
   const confirmAttendance = () => {
     const message = encodeURIComponent("¡Hola! Confirmo mi asistencia al cumpleaños de Mateo 🎈");
@@ -32,12 +42,12 @@ export default function Home() {
         <img className="characters" src="/assets/characters.png" alt="Bluey y Bingo celebrando" />
         <figure className="ribbon ribbon-blue">
           <img src="/assets/ribbon.png" alt="" />
-          <CurvedText className="ribbon-copy ribbon-copy-blue">Cumpleaños de</CurvedText>
+          <RibbonText direction="up">Cumpleaños de</RibbonText>
         </figure>
         <h1><small aria-hidden="true">🐾</small> Mateo <small aria-hidden="true">🐾</small></h1>
         <figure className="ribbon ribbon-gold">
           <img src="/assets/celebrate-ribbon.png" alt="" />
-          <CurvedText className="ribbon-copy ribbon-copy-gold" curve={10} dip>Acompáñanos a celebrar</CurvedText>
+          <RibbonText direction="down">Acompáñanos a celebrar</RibbonText>
         </figure>
       </section>
 
