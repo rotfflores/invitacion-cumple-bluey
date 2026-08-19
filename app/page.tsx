@@ -101,7 +101,7 @@ export default function Home() {
       </section>
 
       <section className="gift-section" aria-label="Mesa de regalos">
-        <h2>Mesa de regalos</h2>
+        <h2><Paw className="paw-gold" /><span>Mesa de regalos</span><Paw className="paw-gold" /></h2>
         <img src="/assets/gift-box.png" alt="Regalo azul con moño dorado" />
         <p>Tu presencia es nuestro mejor regalo. Si deseas hacernos un obsequio, habrá mesa de regalos.<strong>Gracias de corazón</strong></p>
       </section>
