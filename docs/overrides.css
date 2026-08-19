@@ -22,7 +22,7 @@ body{background-image:linear-gradient(180deg,#07509a 0%,#2388cb 43%,#8ed2f1 74%,
 .ribbon .ribbon-copy{position:absolute;inset:0;width:100%;height:100%;overflow:visible;font-family:Georgia,serif;font-size:clamp(50px,7vw,68px);font-weight:700;fill:#fff;filter:drop-shadow(0 3px 2px #08366f)}
 .ribbon-gold .ribbon-copy{font-size:clamp(42px,6vw,56px);fill:#173f78;filter:drop-shadow(0 2px 1px #fff4cf)}
 .paw-icon{display:inline-block;width:.5em;height:.5em;margin:0 .07em;vertical-align:.12em;fill:#1764b1;filter:drop-shadow(0 2px 0 #fff)}
-.characters{top:22%;left:19%;width:62%}
-.ribbon-blue{top:61%;left:26%;width:48%}
-.hero-section h1{top:71%;left:23%;width:54%}
-.ribbon-gold{top:83%;left:26%;width:48%}
+.characters{top:21%;left:16%;width:68%}
+.ribbon-blue{top:63.5%;left:26%;width:48%}
+.hero-section h1{top:75%;left:23%;width:54%}
+.ribbon-gold{top:84%;left:26%;width:48%}
