@@ -21,3 +21,9 @@ button{font:inherit}
 .details-section{display:grid;grid-template-columns:1fr 3px 1.45fr;align-items:center;min-height:148px;margin-top:16px;padding:18px 17px;background:#fffffff0;box-shadow:0 8px 20px #123b801a}.details-section hr{width:3px;height:110px;margin:0;border:0;background:var(--navy)}.date,.event{display:flex;margin:0;flex-direction:column;align-items:center}.date span{font-size:16px}.date strong{font-family:Georgia,serif;font-size:60px;line-height:.88;font-weight:500}.event strong{font-size:18px}.event span{margin-top:12px;font-size:16px;font-weight:700}.event small{margin-top:3px;font-size:14px;line-height:1.15}
 .rsvp-section{text-align:center}.rsvp-section button{width:100%;margin-top:18px;padding:15px 22px;border:0;border-radius:999px;color:#fff;background:var(--navy);font-weight:700;font-size:18px;cursor:pointer;box-shadow:0 8px #0a285d;transition:.2s}.rsvp-section button:hover{transform:translateY(-2px);box-shadow:0 10px #0a285d}.rsvp-section button:focus-visible{outline:4px solid var(--gold);outline-offset:3px}.rsvp-section p{margin:18px 0 0;font-size:14px;font-weight:600}
 @media(max-width:480px){.invitation-page{padding-inline:4px}.details-section{padding-inline:9px}.event strong{font-size:16px}}
+
+/* Stronger side artwork and copy following each ribbon's visible band. */
+.hero-section::before{top:3%;bottom:3%}
+.balloons{top:1%;height:98%}
+.ribbon-copy-blue{inset:14% 18% 43%;filter:drop-shadow(0 1px 1px #062e61)}
+.ribbon-copy-gold{inset:23% 14% 27%;filter:drop-shadow(0 1px 1px #d4a94f)}
