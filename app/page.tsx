@@ -82,7 +82,7 @@ export default function Home() {
       </section>
 
       <section className="reception-section" aria-label="Información de la recepción">
-        <h2><Paw /> Recepción <Paw /></h2>
+        <h2>Recepción</h2>
         <article className="reception-schedule">
           <p><span className="event-icon" aria-hidden="true">🗓️</span><strong>Sábado</strong><small>17 de octubre<br />de 2026</small></p>
           <p><span className="event-icon" aria-hidden="true">🕐</span><strong>1:00 p. m.</strong><small>Hora de inicio</small></p>
